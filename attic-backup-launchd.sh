@@ -3,9 +3,10 @@
 HOMEDIR=/Users/dave.webb
 REPOSITORY=$HOMEDIR/Backups/WFH.attic
 NOW=$(date '+%Y-%m-%d_%H%M%S')
+ATTIC_BIN=/usr/local/bin/attic
 
 # Backup all of HOMEDIR except excluded directories
-attic create --stats                            \
+$ATTIC_BIN create --stats                       \
     $REPOSITORY::WFH-automated-$NOW             \
     $HOMEDIR                                    \
     --exclude $HOMEDIR/.Trash                   \
@@ -23,5 +24,5 @@ attic create --stats                            \
     --exclude '*.swp'
 
 # Use the `prune` subcommand to maintain a reasonable set of backups.
-attic prune -v $REPOSITORY --keep-hourly=48 --keep-daily=7 --keep-weekly=4 --keep-monthly=18 --keep-yearly=10
+$ATTIC_BIN prune -v $REPOSITORY --keep-hourly=48 --keep-daily=7 --keep-weekly=4 --keep-monthly=18 --keep-yearly=10
 
