@@ -12,6 +12,7 @@ http://alvinalexander.com/mac-os-x/mac-osx-startup-crontab-launchd-jobs
 Install Launchd script
 ======================
 
+$ ln -s /Users/dave.webb/src/attic-backup-scripts/org.attic-backup.hourly.plist ~/Library/LaunchAgents/
 $ cd ~/Library/LaunchAgents/
 $ launchctl
 launchd% load org.attic-backup.hourly.plist
