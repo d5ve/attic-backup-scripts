@@ -21,6 +21,7 @@ $ATTIC_BIN create --stats                       \
     --exclude $HOMEDIR/Music                    \
     --exclude $HOMEDIR/Pictures                 \
     --exclude $HOMEDIR/Public                   \
+    --exclude $HOMEDIR/tmp                      \
     --exclude '*.m4v'                           \
     --exclude '*.mkv'                           \
     --exclude '*.mp3'                           \
