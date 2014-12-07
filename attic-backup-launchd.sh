@@ -28,6 +28,8 @@ $ATTIC_BIN create --stats                       \
     --exclude '*.mp4'                           \
     --exclude '*.pyc'                           \
     --exclude '*.swp'                           \
+    --exclude '*.vob'                           \
+
 
 # Use the `prune` subcommand to maintain a reasonable set of backups.
 $ATTIC_BIN prune -v $REPOSITORY --keep-hourly=48 --keep-daily=7 --keep-weekly=4 --keep-monthly=18 --keep-yearly=10
